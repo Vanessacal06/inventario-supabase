@@ -78,7 +78,7 @@ function mostrarProductos(productos){
 
     articulo.className = "card-producto";
 
-    articulo.innerHTML = `
+        articulo.innerHTML = `
       <h3>${producto.nombre}</h3>
 
       <p>${producto.descripcion}</p>
@@ -86,6 +86,8 @@ function mostrarProductos(productos){
       <p>Precio: $${producto.precio}</p>
 
       <p>Cantidad: ${producto.cantidad}</p>
+      
+      <p>Agregado por: ${producto.correo || 'Sin correo'}</p>
 
       <button onclick="prepararEdicion(
         ${producto.id},
@@ -102,6 +104,7 @@ function mostrarProductos(productos){
         Eliminar
       </button>
     `;
+    
 
     contenedor.appendChild(articulo);
 
